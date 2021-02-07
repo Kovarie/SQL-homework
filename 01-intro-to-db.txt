@@ -1,0 +1,31 @@
+Exercise solutions
+
+This database has many tables. Write an SQL command that will print Name from the table Artist (for all the database entries).
+
+SELECT Artist.Name
+FROM Artist;
+
+Print all data from the table Invoice where BillingCountry is Germany.
+SELECT *
+FROM Invoice
+WHERE  Invoice.BillingCountry = 'Germany';
+
+Count how many albums are in the database. Look into the SQL documentation for help: http://www.w3schools.com/sql/sql_functions.asp).
+
+SELECT COUNT(*)
+FROM Album;
+
+How many customers are from France?
+SELECT COUNT(*)
+FROM Customer
+WHERE Customer.Country = 'France';
+
+What is the sum of all invoices (their totals) in the database?
+
+SELECT SUM(Invoice.Total)
+FROM Invoice;
+
+How much is the average of all the invoice totals?
+
+SELECT AVG(Invoice.Total)
+FROM Invoice;
